@@ -10,8 +10,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-       //Parent root = FXMLLoader.load(getClass().getResource("/Techgineers/src/main/resources/com/ejemplo/libreria/resgistro.fxml"));
-       // Parent root = FXMLLoader.load(getClass().getResource("src/main/com/ejemplo/libreria/resgistro.fxml"));
+        //borre linea de abajo daba error
         Parent root = FXMLLoader.load(getClass().getResource("/com/ejemplo/libreria/resgistro.fxml"));
         primaryStage.setTitle("Registro de Usuario");
         primaryStage.setScene(new Scene(root));
