@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ejemplo.libreria.RegistroController">
+
+    <!-- Parte izquierda con formulario -->
+    <left>
+        <VBox alignment="CENTER" spacing="12"
+              style="-fx-background-color: #f5f1ed;"
+              prefWidth="350" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+
+                <!-- Logo -->
+                <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                    <image>
+                        <Image url="@logo.png" />
+                    </image>
+                </ImageView>
+
+                <!-- Título -->
+                <Label text="REGISTRO" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #555;" />
+                <Label text="Ingresa tu información" style="-fx-text-fill: #888;" />
+
+                <!-- Usuario -->
+                <Label text="USUARIO" style="-fx-font-weight: bold; -fx-text-fill: #555;" />
+                <TextField fx:id="txtUsuario" promptText="Ingresa un nombre"
+                           style="-fx-background-color: #b39c94; -fx-text-fill: white;"/>
+
+                <!-- Contraseña -->
+                <Label text="CONTRASEÑA" style="-fx-font-weight: bold; -fx-text-fill: #555;" />
+                <PasswordField fx:id="txtContrasena" promptText="Ingresa contraseña"
+                               style="-fx-background-color: #b39c94; -fx-text-fill: white;" />
+
+                <!-- Confirmar contraseña -->
+                <Label text="CONFIRMAR CONTRASEÑA" style="-fx-font-weight: bold; -fx-text-fill: #555;" />
+                <PasswordField fx:id="txtConfirmar" promptText="Ingresa contraseña"
+                               style="-fx-background-color: #b39c94; -fx-text-fill: white;" />
+
+                <!-- Botón -->
+                <Button text="REGISTRAR" onAction="#registrar"
+                        style="-fx-background-color: #e7a99c; -fx-text-fill: white; -fx-font-weight: bold;" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Fondo con imagen -->
+    <center>
+        <ImageView fitWidth="450" preserveRatio="false" pickOnBounds="true">
+            <image>
+                <Image url="@fondo_registro.jpg" />
+            </image>
+        </ImageView>
+    </center>
+
+</BorderPane>
