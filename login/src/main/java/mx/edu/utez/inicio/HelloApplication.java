@@ -82,6 +82,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Inicio de sesión biblioteca");
         stage.setScene(scene);
         stage.show();
+
+        //Interfaz terminada, aun no es funcional
     }
 
     public static void main(String[] args) {
