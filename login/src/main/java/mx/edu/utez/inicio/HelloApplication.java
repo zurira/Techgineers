@@ -10,11 +10,9 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.scene.layout.StackPane;
 
-import java.io.IOException;
 
 public class HelloApplication extends Application {
 
@@ -34,22 +32,22 @@ public class HelloApplication extends Application {
         root.setBackground(new Background(background));
 
         //Contenedor del login
-        VBox loginCard = new VBox();
+        VBox loginCard = new VBox(15);
         loginCard.setPadding(new Insets(30));
         loginCard.setAlignment(Pos.CENTER);
         loginCard.setMaxWidth(300);
         loginCard.setStyle("-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 20;");
 
         //Logo de forma circular
-        Circle logo = new Circle();
+        Circle logo = new Circle(40);
         logo.setFill(Color.LIGHTPINK);
-        Label lblLogo = new Label();
+        Label lblLogo = new Label("LOGO");
         lblLogo.setTextFill(Color.GRAY);
         StackPane logoContainer = new StackPane(logo, lblLogo);
 
         //Titulo
         Label title = new Label("INICIO DE SESIÓN");
-        title.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
+        title.setFont(Font.font("Arial", 16));
         title.setTextFill(Color.GRAY);
 
         //Etquetas y campo de textoo
@@ -63,11 +61,19 @@ public class HelloApplication extends Application {
         txtPassword.setPromptText("Ingresa tu contraseña");
         txtPassword.setStyle("-fx-background-color: #A38F85; -fx-text-fill: white;");
 
+        // Botón para iniciar sesión
+        Button loginButton = new Button("Iniciar sesión");
+        loginButton.setStyle("-fx-background-color: #D09C8B; -fx-text-fill: white; -fx-font-weight: bold;");
+
+        // Simulación de link de registro
+        Hyperlink registerLink = new Hyperlink("Registrarme");
+        registerLink.setTextFill(Color.GRAY);
+
         // Agregar elementos al panel
         loginCard.getChildren().addAll(
                 logoContainer, title,
                 lblUser, txtUser, lblPassword,
-                txtPassword
+                txtPassword, loginButton, registerLink
         );
 
         root.getChildren().add(loginCard);
