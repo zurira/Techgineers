@@ -52,9 +52,22 @@ public class HelloApplication extends Application {
         title.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
         title.setTextFill(Color.GRAY);
 
+        //Etquetas y campo de textoo
+        Label lblUser = new Label("USUARIO");
+        TextField txtUser = new TextField();
+        txtUser.setPromptText("Ingresa tu usuario");
+        txtUser.setStyle("-fx-background-color: #A38F85; -fx-text-fill: white;");
+
+        Label lblPassword = new Label("CONTRASEÑA");
+        PasswordField txtPassword = new PasswordField();
+        txtPassword.setPromptText("Ingresa tu contraseña");
+        txtPassword.setStyle("-fx-background-color: #A38F85; -fx-text-fill: white;");
+
         // Agregar elementos al panel
         loginCard.getChildren().addAll(
-                logoContainer, title
+                logoContainer, title,
+                lblUser, txtUser, lblPassword,
+                txtPassword
         );
 
         root.getChildren().add(loginCard);
