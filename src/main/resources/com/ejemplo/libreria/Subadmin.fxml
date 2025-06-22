@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="com.ejemplo.libreria.SubadministradorController">
+
+    <left>
+        <VBox spacing="20" alignment="TOP_CENTER" styleClass="menu-lateral">
+            <ImageView fitWidth="80" fitHeight="80" preserveRatio="true">
+                <image>
+                    <Image url="@logo.jpg"/>
+                </image>
+            </ImageView>
+
+            <Button text="👤 Perfil" maxWidth="200" styleClass="menu-btn"/>
+            <Button text="👥 Usuarios" maxWidth="200" styleClass="menu-btn"/>
+            <Button text="📚 Libros" maxWidth="200" styleClass="menu-btn"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="TOP_LEFT" spacing="30" styleClass="contenido">
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50"/>
+            </padding>
+            <HBox spacing="40">
+                <VBox spacing="20" alignment="CENTER">
+                    <!-- Aquí puedes poner un ImageView en lugar del círculo -->
+                    <Label text="Foto" style="-fx-background-color: #bca9a2; -fx-padding: 30; -fx-background-radius: 50%;" />
+                </VBox>
+
+                <VBox spacing="30">
+                    <Label text="Información Subadministrador" styleClass="subtitulo"/>
+                    <HBox spacing="30" alignment="CENTER_LEFT">
+
+                        <Button text="Editar perfil" styleClass="btn-editar" onAction="#editarPerfil"/>
+                        <Button text="⚙" />
+                    </HBox>
+                </VBox>
+            </HBox>
+
+            <GridPane hgap="25" vgap="20">
+                <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Apellido Paterno:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <TextField fx:id="txtApellidoP" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <Label text="Apellido Materno:" GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+                <TextField fx:id="txtApellidoM" GridPane.rowIndex="0" GridPane.columnIndex="5"/>
+
+                <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtEmail" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Teléfono:" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <TextField fx:id="txtTelefono" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <Label text="Dirección:" GridPane.rowIndex="1" GridPane.columnIndex="4"/>
+                <TextField fx:id="txtDireccion" GridPane.rowIndex="1" GridPane.columnIndex="5"/>
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>

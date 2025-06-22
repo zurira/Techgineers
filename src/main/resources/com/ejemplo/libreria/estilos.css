@@ -1,0 +1,33 @@
+.menu-lateral {
+    -fx-background-color: #e9e3df;
+    -fx-padding: 20;
+}
+
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5b4a44;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.contenido {
+    -fx-background-color: #f5f1ed;
+}
+
+.titulo {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5b4a44;
+}
+
+.subtitulo {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333;
+}
+
+.btn-editar {
+    -fx-background-color: #ccc;
+    -fx-text-fill: black;
+    -fx-padding: 5 10;
+    -fx-font-size: 12px;
+}
