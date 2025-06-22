@@ -18,7 +18,7 @@
             <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
 
                 <!-- Logo -->
-                //aqui se cambia el logo
+
                 <HBox alignment="TOP_LEFT">
                 <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
                     <image>
