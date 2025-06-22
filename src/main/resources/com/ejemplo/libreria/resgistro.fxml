@@ -18,11 +18,13 @@
             <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
 
                 <!-- Logo -->
+                <HBox alignment="TOP_LEFT">
                 <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
                     <image>
-                        <Image url="@logo.png" />
+                        <Image url="@logo.jpg" />
                     </image>
                 </ImageView>
+                </HBox>
 
                 <!-- Título -->
                 <Label text="REGISTRO" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #555;" />
@@ -46,15 +48,16 @@
                 <!-- Botón -->
                 <Button text="REGISTRAR" onAction="#registrar"
                         style="-fx-background-color: #e7a99c; -fx-text-fill: white; -fx-font-weight: bold;" />
+                <Label fx:id="lblMensaje" style="-fx-text-fill: red; -fx-font-weight: bold;" />
             </VBox>
         </VBox>
     </left>
 
     <!-- Fondo con imagen -->
     <center>
-        <ImageView fitWidth="450" preserveRatio="false" pickOnBounds="true">
+        <ImageView fitWidth="400" fitHeight="490" preserveRatio="false" pickOnBounds="true">
             <image>
-                <Image url="@fondo_registro.jpg" />
+                <Image url="@fondo.jpg" />
             </image>
         </ImageView>
     </center>
