@@ -17,11 +17,11 @@
             <VBox.margin>
                 <Insets top="40" left="10" right="10" bottom="20" />
             </VBox.margin>
-            <Button text="Inicio" styleClass="nav-button" />
-            <Button text="Búsqueda" styleClass="nav-button" />
-            <Button text="Guardados" styleClass="nav-button" />
-            <Button text="Favoritos" styleClass="nav-button" />
-            <Button text="Cerrar sesión" styleClass="nav-button logout" />
+            <Button fx:id="btnInicio" text="Inicio" styleClass="nav-button" onAction="#goToHome"/>
+            <Button fx:id="btnBusqueda" text="Búsqueda" styleClass="nav-button" onAction="#goToSearch"/>
+            <Button fx:id="btnGuardados" text="Guardados" styleClass="nav-button" />
+            <Button fx:id="btnFavoritos" text="Favoritos" styleClass="nav-button" />
+            <Button fx:id="btnCerrarSesion" text="Cerrar sesión" styleClass="nav-button logout" />
         </VBox>
     </left>
     <!-- Contenido -->

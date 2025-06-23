@@ -1,0 +1,51 @@
+<?import javafx.geometry.Insets?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+            <fx:controller="mx.edu.utez.tt07_dashboard.DashboardController">
+
+<!-- Sidebar -->
+<left>
+    <VBox spacing="20" alignment="TOP_CENTER" styleClass="sidebar">
+        <VBox.margin>
+            <Insets top="40" left="10" right="10" bottom="20" />
+        </VBox.margin>
+        <Button text="Inicio" styleClass="nav-button"               />
+        <Button text="Búsqueda"    styleClass="nav-button selected"      />
+        <Button text="Guardados"   styleClass="nav-button"               />
+        <Button text="Favoritos"   styleClass="nav-button"               />
+        <Button text="Cerrar sesión" styleClass="nav-button logout"      />
+    </VBox>
+</left>
+
+<!-- Contenido -->
+<center>
+    <VBox spacing="15">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label text="Buscar libros" styleClass="main-title"/>
+
+        <!-- Barra de búsqueda -->
+        <HBox spacing="10">
+            <TextField fx:id="txtSearch" promptText="Título, autor o ISBN"
+                       HBox.hgrow="ALWAYS" />
+            <Button text="Buscar" fx:id="btnSearch" styleClass="category-button"/>
+        </HBox>
+
+        <Label text="Resultados" styleClass="section-title"/>
+
+        <!-- Resultados -->
+        <FlowPane fx:id="resultsPane" hgap="15" vgap="15">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <!-- Los resultados se añaden dinámicamente desde el controlador -->
+        </FlowPane>
+    </VBox>
+</center>
+</BorderPane>
