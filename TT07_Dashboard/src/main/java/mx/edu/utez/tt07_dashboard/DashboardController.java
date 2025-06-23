@@ -3,94 +3,48 @@ package mx.edu.utez.tt07_dashboard;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.List;
 
 public class DashboardController {
 
     @FXML
-    private BorderPane mainPane;
-
-    @FXML
-    private AnchorPane mainContent;
-
-    // Botones de navegación
-    @FXML private Button btnInicio;
-    @FXML private Button btnBusqueda;
-    @FXML private Button btnGuardados;
-    @FXML private Button btnFavoritos;
-    @FXML private Button btnCerrarSesion;
+    private StackPane mainContent;
 
     @FXML
     public void initialize() {
-        goToHome(); // carga Home al iniciar
+        goToHome();  // Carga la vista de inicio al arrancar
     }
 
-    private void loadView(String fxmlName) {
-        try {
-            URL url = getClass().getResource("/mx/edu/utez/tt07_dashboard/" + fxmlName);
-            if (url == null) {
-                System.err.println("No se encontró el archivo FXML: " + fxmlName);
-                return;
-            }
+    public void goToHome() {
+        loadView("/view/home.fxml");
+    }
 
-            Parent view = FXMLLoader.load(url);
+    public void goToSearch() {
+        loadView("/view/search.fxml");
+    }
+
+    public void goToSaved(){
+        loadView("/view/saved.fxml");
+    }
+
+    public void goToFavorites() {
+        loadView("/view/favorites.fxml");
+    }
+
+    public void logout() {
+        // Se podría cambiar a la vista de login
+        System.exit(0);
+    }
+
+    private void loadView(String fxmlPath) {
+        try {
+            Parent view = FXMLLoader.load(getClass().getResource(fxmlPath));
             mainContent.getChildren().setAll(view);
-            AnchorPane.setTopAnchor(view, 0.0);
-            AnchorPane.setBottomAnchor(view, 0.0);
-            AnchorPane.setLeftAnchor(view, 0.0);
-            AnchorPane.setRightAnchor(view, 0.0);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
-    private void resetButtonStyles() {
-        List<Button> buttons = List.of(btnInicio, btnBusqueda, btnGuardados, btnFavoritos, btnCerrarSesion);
-        for (Button btn : buttons) {
-            btn.getStyleClass().remove("selected");
-        }
-    }
-
-    @FXML
-    private void goToHome() {
-        loadView("/view/home.fxml");
-        resetButtonStyles();
-        btnInicio.getStyleClass().add("selected");
-    }
-
-    @FXML
-    private void goToSearch() {
-        loadView("/view/search.fxml");
-        resetButtonStyles();
-        btnBusqueda.getStyleClass().add("selected");
-    }
-
-
-    @FXML
-    private void goToSaved() {
-        loadView("/view/saved.fxml");
-        resetButtonStyles();
-        btnGuardados.getStyleClass().add("selected");
-    }
-
-    @FXML
-    private void goToFavorites() {
-        loadView("/view/favorites.fxml");
-        resetButtonStyles();
-        btnFavoritos.getStyleClass().add("selected");
-    }
-
-    @FXML
-    private void goToLogout() {
-        loadView("/view/logout.fxml");
-        resetButtonStyles();
-        btnCerrarSesion.getStyleClass().add("selected");
-    }
 }
+

@@ -4,7 +4,8 @@
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml">
     <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
-          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" padding="20">
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" padding="20"
+          alignment="CENTER"  stylesheets="@../css/styles.css">
         <Label text="Mis guardados" styleClass="main-title"/>
         <Label text="Libros guardados" styleClass="section-title"/>
         <FlowPane fx:id="savedPane" hgap="15" vgap="15"/>

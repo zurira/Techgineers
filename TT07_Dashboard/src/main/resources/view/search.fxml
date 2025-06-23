@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml">
-            <fx:controller="mx.edu.utez.tt07_dashboard.DashboardController">
 
 <!-- Sidebar -->
 <left>
-    <VBox spacing="20" alignment="TOP_CENTER" styleClass="sidebar">
+    <VBox spacing="20" alignment="TOP_CENTER" styleClass="sidebar"
+          stylesheets="@../css/styles.css">
         <VBox.margin>
             <Insets top="40" left="10" right="10" bottom="20" />
         </VBox.margin>

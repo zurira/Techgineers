@@ -6,7 +6,9 @@
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml">
     <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
-          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" padding="20">
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" padding="20"
+          xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+          alignment="CENTER"  stylesheets="@../css/styles.css">
         <Label text="¡Bienvenido!" styleClass="main-title" />
 
         <HBox spacing="10">
