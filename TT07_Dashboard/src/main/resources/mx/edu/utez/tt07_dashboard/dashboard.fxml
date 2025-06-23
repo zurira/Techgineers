@@ -19,9 +19,9 @@
             </VBox.margin>
             <Button fx:id="btnInicio" text="Inicio" styleClass="nav-button" onAction="#goToHome"/>
             <Button fx:id="btnBusqueda" text="Búsqueda" styleClass="nav-button" onAction="#goToSearch"/>
-            <Button fx:id="btnGuardados" text="Guardados" styleClass="nav-button" />
-            <Button fx:id="btnFavoritos" text="Favoritos" styleClass="nav-button" />
-            <Button fx:id="btnCerrarSesion" text="Cerrar sesión" styleClass="nav-button logout" />
+            <Button fx:id="btnGuardados" text="Guardados" styleClass="nav-button" onAction="#goToSaved"/>
+            <Button fx:id="btnFavoritos" text="Favoritos" styleClass="nav-button" onAction="#goToFavorites"/>
+            <Button fx:id="btnCerrarSesion" text="Cerrar sesión" styleClass="nav-button logout" onAction="#goToLogout"/>
         </VBox>
     </left>
     <!-- Contenido -->

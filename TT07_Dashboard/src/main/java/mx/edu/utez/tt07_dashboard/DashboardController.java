@@ -73,4 +73,24 @@ public class DashboardController {
     }
 
 
+    @FXML
+    private void goToSaved() {
+        loadView("/view/saved.fxml");
+        resetButtonStyles();
+        btnGuardados.getStyleClass().add("selected");
+    }
+
+    @FXML
+    private void goToFavorites() {
+        loadView("/view/favorites.fxml");
+        resetButtonStyles();
+        btnFavoritos.getStyleClass().add("selected");
+    }
+
+    @FXML
+    private void goToLogout() {
+        loadView("/view/logout.fxml");
+        resetButtonStyles();
+        btnCerrarSesion.getStyleClass().add("selected");
+    }
 }
