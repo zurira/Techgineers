@@ -12,7 +12,10 @@ public class DasboardApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DasboardApplication.class.getResource("dashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        scene.getStylesheets().addAll(
+                getClass().getResource("/css/styles.css").toExternalForm()
+        );
+        stage.setTitle("Dashboard");
         stage.setScene(scene);
         stage.show();
     }
