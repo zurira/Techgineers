@@ -1,16 +1,18 @@
-package mx.edu.utez.tt07_dashboard;
+package mx.edu.utez.tt08_dashboard;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
 
 public class DashboardController {
 
+
     @FXML
-    private StackPane mainContent;
+    private AnchorPane mainContent;
 
     @FXML
     public void initialize() {
@@ -47,4 +49,3 @@ public class DashboardController {
         }
     }
 }
-

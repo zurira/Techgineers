@@ -2,13 +2,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml">
     <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
-          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" padding="20"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
           alignment="CENTER"  stylesheets="@../css/styles.css">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
         <Label text="Mis guardados" styleClass="main-title"/>
         <Label text="Libros guardados" styleClass="section-title"/>
         <FlowPane fx:id="savedPane" hgap="15" vgap="15"/>
     </VBox>
 </AnchorPane>
-

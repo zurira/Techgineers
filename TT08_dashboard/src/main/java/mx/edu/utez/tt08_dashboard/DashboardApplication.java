@@ -1,4 +1,4 @@
-package mx.edu.utez.tt07_dashboard;
+package mx.edu.utez.tt08_dashboard;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,10 +8,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class DasboardApplication extends Application {
+public class DashboardApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/mx/edu/utez/tt07_dashboard/dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/mx/edu/utez/tt08_dashboard/dashboard.fxml"));
         Scene scene = new Scene(root, 320, 240);
         scene.getStylesheets().addAll(
                 getClass().getResource("/css/styles.css").toExternalForm()

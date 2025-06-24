@@ -2,10 +2,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml">
     <VBox alignment="CENTER" spacing="20" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
-          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" padding="40"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
           stylesheets="@../css/styles.css">
+        <padding>
+            <Insets top="40" right="40" bottom="40" left="40"/>
+        </padding>
         <Label text="¿Seguro que deseas cerrar sesión?" styleClass="main-title"/>
         <HBox spacing="15" alignment="CENTER">
             <Button text="Cancelar" styleClass="category-button"/>
@@ -13,4 +17,3 @@
         </HBox>
     </VBox>
 </AnchorPane>
-
