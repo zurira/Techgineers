@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+              stylesheets="@../css/styles.css">
+            <VBox.margin>
+                <Insets top="40" left="10" right="10" bottom="20" />
+            </VBox.margin>
+        </VBox>
+    </left>
+
+    <!-- Contenido -->
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Buscar libros" styleClass="main-title"/>
+
+            <!-- Barra de búsqueda -->
+            <HBox spacing="10">
+                <TextField fx:id="txtSearch" promptText="Título, autor o ISBN"
+                           HBox.hgrow="ALWAYS" />
+                <Button text="Buscar" fx:id="btnSearch" styleClass="category-button"/>
+            </HBox>
+
+            <Label text="Resultados" styleClass="section-title"/>
+
+            <!-- Resultados -->
+            <FlowPane fx:id="resultsPane" hgap="15" vgap="15">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <!-- Los resultados se añaden dinámicamente desde el controlador -->
+            </FlowPane>
+            <FlowPane hgap="15" vgap="15">
+                <VBox alignment="CENTER" styleClass="book-card">
+                    <Rectangle width="80" height="100" arcWidth="10" arcHeight="10"
+                               style="-fx-fill: #DDD;" />
+                    <Label text="Nombre libro" />
+                </VBox>
+                <VBox alignment="CENTER" styleClass="book-card">
+                    <Rectangle width="80" height="100" arcWidth="10" arcHeight="10"
+                               style="-fx-fill: #DDD;" />
+                    <Label text="Nombre libro" />
+                </VBox>
+            </FlowPane>
+        </VBox>
+    </center>
+</BorderPane>

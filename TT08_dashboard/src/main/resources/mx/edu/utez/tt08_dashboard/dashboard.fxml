@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane fx:id="mainPane" xmlns:fx="http://javafx.com/fxml" fx:controller="mx.edu.utez.tt08_dashboard.DashboardController">
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="20" alignment="CENTER" styleClass="sidebar">
+            <VBox.margin>
+                <Insets top="40" left="10" right="10" bottom="20" />
+            </VBox.margin>
+            <!--Button text=" Inicio" onAction="#goToHome" styleClass="nav-button">
+                <graphic>
+                    <ImageView image="@/images/home.png" fitWidth="16" fitHeight="16"/>
+                </graphic>
+            </Button>
+
+            <Button text=" Buscar" onAction="#goToSearch" styleClass="nav-button">
+                <graphic>
+                    <ImageView image="@/images/search.png" fitWidth="16" fitHeight="16"/>
+                </graphic>
+            </Button>
+
+            <Button text=" Guardados" onAction="#goToSaved" styleClass="nav-button">
+                <graphic>
+                    <ImageView image="@/images/saved.png" fitWidth="16" fitHeight="16"/>
+                </graphic>
+            </Button>
+
+            <Button text=" Favoritos" onAction="#goToFavorites" styleClass="nav-button">
+                <graphic>
+                    <ImageView image="@/images/favorites.png" fitWidth="16" fitHeight="16"/>
+                </graphic>
+            </Button>
+
+            <Button text=" Cerrar sesión" onAction="#logout" styleClass="nav-button logout">
+                <graphic>
+                    <ImageView image="@/images/logout.png" fitWidth="16" fitHeight="16"/>
+                </graphic>
+            </Button-->
+            <Button text="Inicio" onAction="#goToHome" styleClass="nav-button"/>
+            <Button text="Buscar" onAction="#goToSearch" styleClass="nav-button"/>
+            <Button text="Guardados" onAction="#goToSaved" styleClass="nav-button"/>
+            <Button text="Favoritos" onAction="#goToFavorites" styleClass="nav-button"/>
+            <Button text="Cerrar sesión" onAction="#logout" styleClass="nav-button"/>
+
+        </VBox>
+    </left>
+    <!-- Contenido -->
+
+    <center>
+        <AnchorPane fx:id="mainContent">
+            <children>
+                <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+
+                    <Label text="¡Bienvenido!" styleClass="main-title" />
+
+                    <!-- Categorías -->
+                    <HBox spacing="10">
+                        <Button text="Romance" styleClass="category-button" />
+                        <Button text="Ficción" styleClass="category-button" />
+                        <Button text="Deportes" styleClass="category-button" />
+                        <Button text="Científico" styleClass="category-button" />
+                        <Button text="Diccionario" styleClass="category-button" />
+                    </HBox>
+
+                    <Label text="Agregados recientemente" styleClass="section-title" />
+
+                    <!-- Libros recientes -->
+                    <FlowPane hgap="15" vgap="15">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+
+                        <VBox alignment="CENTER" styleClass="book-card">
+                            <Rectangle width="80" height="100" arcWidth="10" arcHeight="10" style="-fx-fill: #DDD;" />
+                            <Label text="Nombre libro" />
+                        </VBox>
+                        <VBox alignment="CENTER" styleClass="book-card">
+                            <Rectangle width="80" height="100" arcWidth="10" arcHeight="10" style="-fx-fill: #DDD;" />
+                            <Label text="Nombre libro" />
+                        </VBox>
+                        <VBox alignment="CENTER" styleClass="book-card">
+                            <Rectangle width="80" height="100" arcWidth="10" arcHeight="10" style="-fx-fill: #DDD;" />
+                            <Label text="Nombre libro" />
+                        </VBox>
+                        <VBox alignment="CENTER" styleClass="book-card">
+                            <Rectangle width="80" height="100" arcWidth="10" arcHeight="10" style="-fx-fill: #DDD;" />
+                            <Label text="Nombre libro" />
+                        </VBox>
+                    </FlowPane>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+
+</BorderPane>

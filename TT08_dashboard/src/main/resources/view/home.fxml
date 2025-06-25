@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml">
+    <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+          xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+          alignment="CENTER"  stylesheets="@../css/styles.css">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+        <Label text="¡Bienvenido!" styleClass="main-title" />
+
+        <HBox spacing="10">
+            <Button text="Romance" styleClass="category-button"/>
+            <Button text="Ficción" styleClass="category-button"/>
+            <Button text="Deportes" styleClass="category-button"/>
+            <Button text="Científico" styleClass="category-button"/>
+            <Button text="Diccionario" styleClass="category-button"/>
+        </HBox>
+
+        <Label text="Agregados recientemente" styleClass="section-title" />
+
+        <FlowPane hgap="15" vgap="15">
+            <VBox alignment="CENTER" styleClass="book-card">
+                <Rectangle width="80" height="100" arcWidth="10" arcHeight="10"
+                           style="-fx-fill: #DDD;" />
+                <Label text="Nombre libro" />
+            </VBox>
+            <VBox alignment="CENTER" styleClass="book-card">
+                <Rectangle width="80" height="100" arcWidth="10" arcHeight="10"
+                           style="-fx-fill: #DDD;" />
+                <Label text="Nombre libro" />
+            </VBox>
+        </FlowPane>
+    </VBox>
+</AnchorPane>
